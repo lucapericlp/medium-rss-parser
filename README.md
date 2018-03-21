@@ -50,7 +50,7 @@ and it auto populates an instance array of all Post objects found throughout the
 6. ```php $post->getCollectionOfImages(); ```
 	- returns array of all images found within that post
 7. ```php $post->getContent(); ```
-	- returns just the content within <p> tags
+	- returns just the content within p tags
 8. ```php $post->getFullContent(); ```
 	- returns full content as received
 
