@@ -1,5 +1,5 @@
 <?php
-require('MediumRSSParser/BlogObject.php');
+require('medium-rss-parser/BlogObject.php');
 ?>
 <!DOCTYPE html>
 <html lang=en>
