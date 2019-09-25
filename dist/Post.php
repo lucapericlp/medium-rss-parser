@@ -1,12 +1,13 @@
 <?php
 class Post{
-	private $title, $link, $pubDate, $summary, $headerImage, $fullContent, $content;
+	private $title, $link, $creator, $pubDate, $summary, $headerImage, $fullContent, $content;
 	private $collectionOfImages = [];
 	private $summaryLength = 120;
 	
 	public function __construct($item){
 		$this->title = $item->title;
 		$this->link = $item->link;
+		$this->creator = $item->children('dc', true)->creator;
 		$this->pubDate = $this->stringToDT($item->pubDate);
 		$this->fullContent = $item->children('http://purl.org/rss/1.0/modules/content/')->encoded;
 		$this->content = $this->parseContent($this->fullContent);
@@ -14,7 +15,7 @@ class Post{
 		$this->collectionOfImages = $this->parseImages($this->fullContent);
 		if(empty($this->collectionOfImages[0])){
 			$this->headerImage = false;
-		}else{
+		} else{
 			$this->headerImage = $this->collectionOfImages[0];	
 		}
 	}
@@ -66,6 +67,10 @@ class Post{
 
 	public function getLink(){
 		return $this->link;
+	}
+
+	public function getCreator(){
+		return $this->creator;
 	}
 
 	public function getPubDate(){
