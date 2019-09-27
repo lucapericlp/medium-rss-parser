@@ -54,4 +54,4 @@ and it auto populates an instance array of all Post objects found throughout the
 
 ## Contributing
 
-Feel free to contribute to the project and if you provide valid code, I'll try get to including them asap.
+Feel free to contribute to the project and if you provide valid code, I'll try get to including them asap. I'm no longer maintaining this repo.
