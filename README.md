@@ -12,10 +12,6 @@ Medium-rss-parser is an open source project allowing users to get all their Medi
 * __Content__ - just the text of the post
 * __Collection of Images__ (Array) - <img> tags for every image in the post
 
-## Live Demo
-
-https://lucaperic.com indexes all my Medium posts as an example for this project.
-
 ## Downloading and using MediumRSSParser
 
 In order to use MediumRSSParser in your project, download the library and store in your path of choice wihtin your project:
